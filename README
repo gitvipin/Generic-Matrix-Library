@@ -1,2 +1,20 @@
-This is a sample Matrix Library written in C++. Library has been written generically using C++ Templates.
+
+This is a simple Matrix Library written in C++ using Templates. All the code for Matrix library is provided in the matrix.h and it is the file which needs to be included in any program that intends to use this library. 
+
+A basic main function that shows the usage of matrix library is shown in main.cpp file. This function shows the simple instantiation and other basic operations on these Matrix objects. 
+
+To use and test the library, please run through the following steps. 
+
+1. Download the Library 
+2. Run the "MAKE" command by simply saying "make" or "make -f makefile"
+3. Above step should create a ./run , binary execuatble. 
+4. Simply run the execuatble "./run" 
+
+
+Above steps have also been written into the shell file - `xrun`. It can be executed simply by running the following command. 
+
+$sh -x ./xrun 
+
+
+
 
