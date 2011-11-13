@@ -1,0 +1,5 @@
+clear
+mv run runOld
+make 
+./run
+
