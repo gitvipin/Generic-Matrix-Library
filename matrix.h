@@ -21,7 +21,7 @@ class Matrix{
     Matrix<T> & operator=(Matrix<T> );
 
     public:
-    void Print();    //print the Matrix
+    void Print() const;    //print the Matrix
     void GiveInput();
     void Read(T [],unsigned int);
 
@@ -85,7 +85,7 @@ Matrix<T> & Matrix<T>::operator=(Matrix<T> rhs){
 }
 
 template<class T>
-void Matrix<T>::Print(){
+void Matrix<T>::Print() const {
     cout << "Displaying Matrix ................................" <<endl;
     T *Data = (T*)data; 
     for(int i=0; i < nRow;  i++){
