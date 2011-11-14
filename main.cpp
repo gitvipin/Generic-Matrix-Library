@@ -23,11 +23,14 @@ int main (int argc , char *argv[]){
     m.Print();
     n.Print();
 
+    /*
     o = m;
     o = m+n;
-
-    //(m+n).Print();
     o.Print();
+    */
+
+    (m+n).Print();
+    (m-n).Print();
 
     return 0;
 }
