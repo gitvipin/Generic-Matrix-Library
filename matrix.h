@@ -26,6 +26,7 @@ class Matrix{
     void Read(T [],unsigned int);
 
     template<class M> friend const Matrix<M> operator+(Matrix<M> & lhs , Matrix<M> & rhs);
+    template<class M> friend const Matrix<M> operator-(Matrix<M> & lhs, Matrix<M> &rhs);
 };
 
 
@@ -142,6 +143,27 @@ const Matrix<T> operator+(Matrix<T> & lhs , Matrix<T> & rhs){
 
     return temp;
 }
+
+template <class T>
+const Matrix<T> operator-(Matrix<T> & lhs , Matrix<T> & rhs){
+    unsigned int nRow = lhs.nRow;
+    unsigned int nCol = lhs.nCol;
+
+    Matrix<T> temp(nRow,nCol);
+    
+    if(lhs.nRow == rhs.nRow && lhs.nCol == rhs.nCol){
+        T   *ldata = (T*)lhs.data;
+        T   *rdata = (T*)rhs.data;
+        T   *tdata = (T*)temp.data;
+
+        for(int i =0; i < nRow; i++)
+            for(int j=0; j <nCol; j++)
+                tdata[nCol*i+j] = ldata[nCol*i+j] - rdata[nCol*i+j];
+    }else
+        throw MATRIX_UNEQUAL_SUBTRACTION;
+    return temp;
+}
+
 
 #endif // __MATRIX_H
 
