@@ -11,6 +11,7 @@ int main (int argc , char *argv[]){
     cout << "=========================================================" <<endl ;
 
     unsigned int size = sizeof Data/sizeof Data[0];
+	try {
 
     Matrix<int>  m(4,5);
     Matrix<int>  n(4,5);
@@ -31,6 +32,13 @@ int main (int argc , char *argv[]){
 
     (m+n).Print();
     (m-n).Print();
+	}
+	catch(EXCEPTION_CODE e){
+		HandleError(e);
+	}
+	catch( Error & e){
+		HandleError(e);
+	}
 
     return 0;
 }

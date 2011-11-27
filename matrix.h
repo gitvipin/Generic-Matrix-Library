@@ -81,7 +81,7 @@ Matrix<T> & Matrix<T>::operator=(Matrix<T> rhs){
             }
         }
     }else
-        throw MATRIX_UNEQUAL;
+        throw MATRIX_UNEQUAL_ASSIGNMENT;
    return (*this);
 }
 

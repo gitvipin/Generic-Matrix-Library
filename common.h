@@ -4,11 +4,7 @@
 #include <iostream>
 using namespace std;
 
-enum EXCEPTION_CODES{
-    MATRIX_UNEQUAL=101,
-    MATRIX_UNEQUAL_ADDITION=101,
-    MATRIX_UNEQUAL_SUBTRACTION=102
-};
+#include "error.h"
 
 #define _DEBUG_LEVEL3   0
 
