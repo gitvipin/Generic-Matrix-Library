@@ -48,7 +48,7 @@ Matrix<T>::Matrix(int r, int c):nRow(r),nCol(c),data(NULL){
 template<class T> 
 Matrix<T>::~Matrix(){
     PRNTDBG_L3("Matrix::~Matrix");
-    delete data;
+    delete []data;/* call destructor on each object if object is user defined. */
     data = NULL;
 }
 

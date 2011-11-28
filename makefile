@@ -17,5 +17,5 @@ error.o: error.cpp error.h
 	$(CC) $(CFLAGS) error.cpp
 
 clean: 
-	$(DEL) main.o matrix.o run 
+	$(DEL) main.o matrix.o error.o run 
 	
