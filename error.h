@@ -26,5 +26,8 @@ public:
 	}
 };
 
+void HandleError(EXCEPTION_CODE & e);
+void HandleError(Error & e);
+
 #endif // __ERROR_H
 
