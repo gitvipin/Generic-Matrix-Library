@@ -15,9 +15,11 @@ inline void PRNTDBG_L3(const char *msg){
 #endif
 }
 
+#ifndef _DEBUG
+/* if not in debug mode, supress all the debugging calls*/
+#define PRNTDBG_L3(x)	 
+#endif
+
+
 
 #endif // _COMMON_H
-
-
-
-
